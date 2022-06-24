@@ -1,0 +1,10 @@
+<h2 class="seasonCampaign">{{campaignYear}} {{CompetitionName}}</h2>
+
+<div [ngSwitch]="CompetitionYear">
+    <div *ngSwitchCase="'20242025'"><competitions2024-2025></competitions2024-2025></div>
+    <div *ngSwitchCase="'20232024'"><competitions2023-2024></competitions2023-2024></div>
+    <div *ngSwitchCase="'20222023'"><competitions2022-2023></competitions2022-2023></div>
+    <div *ngSwitchCase="'20212022'"><competitions2021-2022></competitions2021-2022></div>
+    <div *ngSwitchDefault>This is Default</div>
+  </div>
+

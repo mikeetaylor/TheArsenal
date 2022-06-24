@@ -1,0 +1,42 @@
+<ng-container PlayerToFirstTeam="teamYear">
+    <div class="p-0">
+        <mat-toolbar class="d-flex justify-content-between">
+            <h2 class="player-name">{{ position }} {{firstName}} {{lastName}}</h2>
+                <button mat-button (click)="onClose()">
+                    <mat-icon>close</mat-icon>
+                </button>
+        </mat-toolbar>
+            <mat-grid-list cols="1">
+                <div class="boxes-wrapper">
+                    <div class="box a">
+                        <img mat-card-image [src]="'/assets/images/players/' + imageName + '.jpg'" class="player-card" />
+                    </div>
+                    <div>
+                        <div class="box year"><span>{{campaignYear}}</span><br />
+                            <span style="font-size: 1.25rem;" (click)="nextCompetition()">{{competitionName}}</span></div>
+                        <div class="box b">
+                            <div class="boxes-wrapper2">
+                                <div class="roster-box e"><span>{{ goals }}</span><br />
+                                    <span>Goals</span></div>
+                                <div class="roster-box f"><span>{{ assists }}</span><br />
+                                    <span>Assists</span></div>
+                                <div class="roster-box g"><span>{{ cleanSheets }}</span><br />
+                                    <span>Clean Sheets</span></div>
+                                <div class="roster-box h"><span>{{ appearances }}</span><br />
+                                    <span>Appearances</span></div>
+                            </div>
+                        </div>
+                        <div class="box c">
+                            <img mat-card-image [src]="'/assets/images/flags/' + country + '.png'" 
+                            class="flag" /><br />
+                            <button class="btn btn-danger" style="color: #fff !important; width: 50%;" [disabled]="prevButtonIsDisabled"
+                            (click)="prevPlayerOnRoster()">Prev</button>
+                            <button class="btn btn-danger" style="color: #fff !important; width: 50%;" [disabled]="nextButtonIsDisabled" 
+                            (click)="nextPlayerOnRoster()">Next</button>
+                       </div>
+                    </div>
+                </div>
+            </mat-grid-list>
+    </div>
+</ng-container>
+

@@ -1,0 +1,18 @@
+<div class="container clear-7vh">
+    <mat-form-field appearance="fill" class="mat-form-field-pulldown">
+      <mat-label>Select a Campaign</mat-label>
+      <mat-select [(ngModel)]="teamYear" disableOptionCentering>
+        <mat-option value="20212022" (click)="sendValueIntoService('20212022')">2021-2022</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div [ngSwitch]="teamYear">
+        <div *ngSwitchCase="'20212022'">
+            <competition [CompetitionYear]="'20212022'" [CompetitionName]="competitionName"></competition>
+            <sa-continental-cup-table [PlayerYear]="'20212022'"></sa-continental-cup-table>
+        </div>
+        <div *ngSwitchDefault>
+            <competition [CompetitionYear]="'20212022'" [CompetitionName]="competitionName"></competition>
+            <sa-continental-cup-table [PlayerYear]="'20212022'"></sa-continental-cup-table>
+        </div>
+      </div>
+</div>

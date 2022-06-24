@@ -1,0 +1,33 @@
+<div class="container clear-7vh">
+    <mat-form-field appearance="fill" class="mat-form-field-pulldown">
+      <mat-label>Select a Campaign</mat-label>
+      <mat-select [(ngModel)]="teamYear" disableOptionCentering>
+        <mat-option value="20242025" (click)="sendValueIntoService('20242025')">2024-2025</mat-option>
+        <mat-option value="20232024" (click)="sendValueIntoService('20232024')">2023-2024</mat-option>
+        <mat-option value="20222023" (click)="sendValueIntoService('20222023')">2022-2023</mat-option>
+        <mat-option value="20212022" (click)="sendValueIntoService('20212022')">2021-2022</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div [ngSwitch]="teamYear">
+      <div *ngSwitchCase="'20242025'">
+          <competition [CompetitionYear]="'20242025'" [CompetitionName]="competitionName"></competition>
+          <epl-table [PlayerYear]="'20242025'"></epl-table>
+      </div>
+      <div *ngSwitchCase="'20232024'">
+          <competition [CompetitionYear]="'20232024'" [CompetitionName]="competitionName"></competition>
+          <epl-table [PlayerYear]="'20232024'"></epl-table>
+      </div>
+        <div *ngSwitchCase="'20222023'">
+            <competition [CompetitionYear]="'20222023'" [CompetitionName]="competitionName"></competition>
+            <epl-table [PlayerYear]="'20222023'"></epl-table>
+        </div>
+        <div *ngSwitchCase="'20212022'">
+            <competition [CompetitionYear]="'20212022'" [CompetitionName]="competitionName"></competition>
+            <epl-table [PlayerYear]="'20212022'"></epl-table>
+        </div>
+        <div *ngSwitchDefault>
+            <competition [CompetitionYear]="'20232024'"></competition>
+            <epl-table [PlayerYear]="'20232024'"></epl-table>
+        </div>
+      </div>
+</div>

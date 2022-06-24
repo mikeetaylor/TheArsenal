@@ -1,0 +1,114 @@
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mat-toolbar {
+    background-color: #DB0007;
+    color: #fff;
+}
+
+.mat-dialog-container {
+    padding: 0px !important;
+}
+
+.roster-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+
+.one {
+    grid-column: 1 / 2;
+    grid-row: 1;
+  }
+
+.two {
+    grid-column: 2 / 2;
+    grid-row: 1;
+  }
+
+.three {
+    grid-column: 1 /2;
+    grid-row: 2;
+  }
+
+.four {
+    grid-column: 2 / 2;
+    grid-row: 2;
+  }
+  
+.roster-box {
+  background-color: rgba(238, 110, 115, 0.7);
+  color: #fff;
+  height: 100%;
+  padding-top: 15%;
+  text-align: center;
+  vertical-align: middle;
+  width: 99%;
+}
+
+.roster-box span:first-child {
+  font-size: 3rem;
+  text-shadow: 2px 1px #000;
+}
+
+.boxes-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". .";
+}
+
+.boxes-wrapper2 {
+  display:grid;
+  grid-template-columns: 50% 50%;
+  grid-row: auto auto;
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+}
+
+.roster-box {
+  display:inline;
+  align-items:center;
+  justify-content:center;
+}
+
+.roster-box-a, .roster-box-b {
+  grid-column: 1 ;
+	grid-row: 1 ;
+}
+
+.roster-box-c, .roster-box-d {
+  grid-column: 1 ;
+	grid-row: 2 ;
+}
+
+.player-name {
+  text-shadow: #000 2px 2px;
+}
+
+.year {
+  background-color: #222045;
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  text-shadow: #f00 1px 1px;
+}
+
+.a {
+  grid-column: 1 ;
+  grid-row: 1 / span 2;
+}
+.b {
+  grid-column: 2 / span 2;
+}
+.c {
+  grid-column: 3 ;
+  grid-column: 2 / span 2;
+}
